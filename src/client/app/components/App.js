@@ -1,6 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router';
-
+import NavLink from './NavLink';
 
 class App extends React.Component {
   render() {
@@ -8,8 +7,10 @@ class App extends React.Component {
       <div>
         <h2>React starter template Omar</h2>
         <ul role="nav">
-          <ul><Link to="/home">Home</Link></ul>
-          <ul><Link to="/about">About</Link></ul>
+          <li><NavLink to="/about">About</NavLink></li>
+          <li><NavLink to="/home">Home</NavLink></li>
+
+          {this.props.children}
         </ul>
       </div>
     )
